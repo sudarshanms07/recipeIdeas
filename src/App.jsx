@@ -1,21 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import SearchBar from './components/SearchBar'
+import React from 'react'
+import Home from './pages/Home'
+import Header from './pages/Header'
 
-function App() {
-  const handleSearch = (val) =>{
-    alert('search for: ' + val)
-  }
+const App = () => {
   return (
-     <div className="min-h-screen p-6">
-      <header className="max-w-4xl mx-auto mb-6">
-        <h1 className="text-3xl font-bold">Recipe Ideas 🍳</h1>
-        <p className="text-gray-600 mt-1">Search recipes by ingredient.</p>
-      </header>
-
-      <main className="max-w-4xl mx-auto">
-        <SearchBar onSearch={handleSearch} />
-      </main>
+    <div className='min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50'>
+      <Header />
+      <Home />
     </div>
   )
 }
